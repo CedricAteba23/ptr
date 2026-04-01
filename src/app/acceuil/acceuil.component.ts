@@ -30,7 +30,7 @@ message:''
 
 sendMessage(){
 
-this.http.post('https://petroback.vercel.app/api/SendMail', this.contact)
+this.http.post('https://petroback.vercel.app/api/sendMail', this.contact)
 .subscribe({
 
 next: () => {
