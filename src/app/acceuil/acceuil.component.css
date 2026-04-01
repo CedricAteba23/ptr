@@ -1,0 +1,474 @@
+/* .hero-section{
+background:#f4f4f4;
+padding:60px 0;
+}
+
+.hero-text h1{
+color:#118a5a;
+font-weight:700;
+font-size:40px;
+}
+
+.subtitle{
+color:#f3b300;
+font-weight:600;
+}
+
+.logo{
+width:120px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+}
+
+.grid-item{
+display:flex;
+justify-content:center;
+align-items:center;
+height:200px;
+}
+
+.grid-item img{
+max-width:80%;
+}
+
+.bg-yellow{
+background:#f3c32e;
+}
+
+.bg-green{
+background:#9bd0b6;
+} */
+
+
+/*corrigé de la première section */
+.hero-section{
+
+height:100vh;
+
+background-image:url("https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+display:flex;
+
+align-items:center;
+
+position:relative;
+
+}
+
+/* overlay sombre pour lisibilité */
+
+.hero-section::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.55);
+
+}
+
+/* contenu */
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+color:white;
+
+max-width:700px;
+
+}
+
+.hero-content h1{
+
+font-size:55px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+}
+
+
+/* responsive mobile */
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:32px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+}
+/*corrigé de la première section */
+
+.about-section{
+background:#0b7a63;
+padding:80px 0;
+}
+
+.oil-img{
+border-radius:8px;
+}
+
+.about-section p{
+font-size:16px;
+line-height:1.7;
+}
+
+.about-section ul{
+margin-top:20px;
+}
+
+.partners-section{
+padding:70px 0;
+background:#ffffff;
+}
+
+.section-title{
+color:#f2b705;
+font-weight:700;
+border-bottom:3px solid #f2b705;
+display:inline-block;
+padding-bottom:10px;
+}
+
+.partner-logo{
+max-width:150px;
+transition:0.3s;
+}
+
+.partner-logo:hover{
+transform:scale(1.1);
+}
+
+.stats-section{
+background:#0b7a63;
+color:white;
+padding:80px 0;
+}
+
+.stat-box h3{
+font-size:40px;
+font-weight:700;
+color:#ffd43b;
+}
+
+/* .footer{
+background:#042f2e;
+color:white;
+padding:30px 0;
+} */
+
+/* sidebar */
+/* bouton menu */
+
+.menu-btn{
+
+position:absolute;
+
+top:20px;
+
+left:20px;
+
+z-index:10;
+
+background:transparent;
+
+border:none;
+
+font-size:30px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+position:fixed;
+
+top:0;
+
+left:-280px;
+
+width:280px;
+
+height:100%;
+
+background:#042f2e;
+
+padding:40px 20px;
+
+transition:0.4s;
+
+z-index:20;
+
+}
+
+.sidebar.active{
+
+left:0;
+
+}
+
+/* bouton fermeture */
+
+.close-btn{
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:25px;
+
+position:absolute;
+
+top:15px;
+
+right:15px;
+
+cursor:pointer;
+
+}
+
+/* menu */
+
+.sidebar ul{
+
+list-style:none;
+
+padding:0;
+
+margin-top:40px;
+
+}
+
+.sidebar ul li{
+
+margin:20px 0;
+
+}
+
+.sidebar ul li a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+
+transition:0.3s;
+
+}
+
+.sidebar ul li a:hover{
+
+color:#ffc107;
+
+}
+
+/* overlay */
+
+.sidebar-overlay{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,0.5);
+
+z-index:15;
+
+}
+
+.footer-section{
+
+width:100%;
+
+background:#042f2e;
+
+color:white;
+
+padding:60px 0 20px 0;
+
+}
+.footer-title{
+
+font-weight:700;
+
+margin-bottom:20px;
+
+color:#ffc107;
+
+}
+
+.footer-links li{
+
+margin-bottom:10px;
+
+}
+
+.footer-links li a{
+
+color:white;
+
+text-decoration:none;
+
+transition:0.3s;
+
+}
+
+.footer-links li a:hover{
+
+color:#ffc107;
+
+padding-left:5px;
+
+}
+
+.social-icons a{
+
+display:inline-block;
+
+margin-right:10px;
+
+font-size:20px;
+
+color:white;
+
+transition:0.3s;
+
+}
+
+.social-icons a:hover{
+
+color:#ffc107;
+
+transform:scale(1.2);
+
+}
+
+.footer-section{
+
+background:#080808;
+
+color:white;
+
+padding:70px 0;
+
+width:100%;
+
+
+}
+
+.footer-title{
+
+font-weight:700;
+
+margin-bottom:20px;
+
+color:#ffd43b;
+
+}
+
+.footer-links{
+
+list-style:none;
+
+padding:0;
+
+}
+
+.footer-links li{
+
+margin-bottom:10px;
+
+}
+
+.footer-links li a{
+
+color:white;
+
+text-decoration:none;
+
+transition:0.3s;
+
+}
+
+.footer-links li a:hover{
+
+color:#ffd43b;
+
+padding-left:5px;
+
+}
+
+.social-icons a{
+
+display:inline-block;
+
+margin-right:15px;
+
+font-size:22px;
+
+color:white;
+
+transition:0.3s;
+
+}
+
+.social-icons a:hover{
+
+color:#ffd43b;
+
+transform:scale(1.2);
+
+}
+
+.copyright{
+
+margin-top:20px;
+
+font-size:14px;
+
+opacity:0.8;
+
+}
