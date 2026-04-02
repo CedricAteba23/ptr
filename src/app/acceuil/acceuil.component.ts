@@ -30,7 +30,7 @@ message:''
 
 sendMessage(){
 
-this.http.post("www.bzzzz.com", this.contact)
+this.http.post("https://ptbc.vercel.app/api/sendMail", this.contact)
 .subscribe({
 
 next: () => {
