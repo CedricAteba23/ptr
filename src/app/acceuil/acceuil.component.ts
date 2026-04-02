@@ -25,8 +25,8 @@ contact = {
 name:'',
 email:'',
 subject:'',
-message:'',
-go:''
+message:''
+
 }
 
 sendMessage(){
