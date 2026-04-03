@@ -31,7 +31,7 @@ message:''
 
 sendMessage(){
 
-this.http.post("https://xback-cm6g.onrender.com", this.contact)
+this.http.post("https://xback-cm6g.onrender.com/api/sendMail", this.contact)
 .subscribe({
 
 next: () => {
