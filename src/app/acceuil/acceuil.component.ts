@@ -35,7 +35,7 @@ this.http.post("https://xback-cm6g.onrender.com/api/sendMail", this.contact)
 .subscribe({
 
 next: () => {
-alert("Message envoyé avec succès");
+console.log("Envoyé avec succès");
 },
 
 error: () => {
