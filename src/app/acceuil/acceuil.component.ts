@@ -31,7 +31,7 @@ message:''
 
 sendMessage(){
 
-this.http.post("https://ptbc.vercel.app/api/sendMail", this.contact)
+this.http.post("https://xback-cm6g.onrender.com", this.contact)
 .subscribe({
 
 next: () => {
