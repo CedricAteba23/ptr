@@ -29,12 +29,24 @@ message:''
 
 }
 
+successMessage: string = '';
+
+  // Affiche le message pendant 3 secondes
+  showSuccess(msg: string) {
+    this.successMessage = msg;
+
+    setTimeout(() => {
+      this.successMessage = '';
+    }, 3000); // disparaît après 3 secondes
+  }
+
 sendMessage(){
 
 this.http.post("https://xback-cm6g.onrender.com/api/sendMail", this.contact)
 .subscribe({
 
 next: () => {
+this.showSuccess("Message envoyé avec succès !");
 console.log("Envoyé avec succès");
 },
 

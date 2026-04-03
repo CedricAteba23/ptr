@@ -245,7 +245,13 @@ Envoyer
 </button>
 
 </form>
+<button (click)="showSuccess('Message envoyé !')">Afficher le message</button>
 
+<!-- Carte de succès -->
+<div *ngIf="successMessage" class="success-card">
+  {{ successMessage }}
+  <button class="close-btn" (click)="successMessage=''">&times;</button>
+</div>
 <section class="footer-section">
 
 <div class="container">
