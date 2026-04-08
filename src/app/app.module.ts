@@ -7,12 +7,14 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EntrepriseComponent } from './entreprise/entreprise.component';
+import { ServComponent } from './serv/serv.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AcceuilComponent,
-    EntrepriseComponent
+    EntrepriseComponent,
+    ServComponent
     
   ],
   imports: [
