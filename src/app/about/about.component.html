@@ -1,0 +1,207 @@
+<!-- ========== HERO ========== -->
+<section class="ab-hero">
+  <div class="ab-hero-bg"></div>
+  <div class="ab-geo"></div>
+  <div class="ab-orb ab-orb1"></div>
+  <div class="ab-orb ab-orb2"></div>
+
+  <div class="container ab-hero-inner">
+
+    <!-- Left text -->
+    <div class="ab-hero-text">
+      <p class="eyebrow aos">À PROPOS DE NOUS</p>
+      <h1 class="ab-title aos">
+        <span class="ab-t-line">Façonner</span>
+        <span class="ab-t-line ab-t-gold"><em>l'avenir</em></span>
+        <span class="ab-t-line">énergétique</span>
+      </h1>
+      <p class="ab-subtitle aos">
+        Depuis 2009, nous sommes le partenaire de confiance des industries,
+        collectivités et entreprises qui s'appuient sur notre expertise pour alimenter
+        leurs activités avec fiabilité et efficience durable.
+      </p>
+    </div>
+
+    <!-- Right visual -->
+    <div class="ab-hero-visual aos">
+      <div class="ab-frame">
+        <div class="ab-frame-inner">
+          <!-- SVG Derrick -->
+          <svg class="derrick-svg" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="100" y1="18" x2="18" y2="244" stroke="rgba(200,134,10,0.55)" stroke-width="2.5"/>
+            <line x1="100" y1="18" x2="182" y2="244" stroke="rgba(200,134,10,0.55)" stroke-width="2.5"/>
+            <line x1="100" y1="18" x2="100" y2="244" stroke="rgba(200,134,10,0.3)" stroke-width="1.5"/>
+            <line x1="38" y1="205" x2="162" y2="205" stroke="rgba(200,134,10,0.45)" stroke-width="1.8"/>
+            <line x1="53" y1="165" x2="147" y2="165" stroke="rgba(200,134,10,0.45)" stroke-width="1.8"/>
+            <line x1="68" y1="125" x2="132" y2="125" stroke="rgba(200,134,10,0.45)" stroke-width="1.8"/>
+            <line x1="82" y1="85" x2="118" y2="85" stroke="rgba(200,134,10,0.45)" stroke-width="1.8"/>
+            <rect x="72" y="232" width="56" height="30" rx="3" fill="rgba(200,134,10,0.12)" stroke="rgba(200,134,10,0.4)" stroke-width="1.5"/>
+            <circle cx="100" cy="18" r="9" fill="rgba(200,134,10,0.2)" stroke="rgba(200,134,10,0.8)" stroke-width="1.8"/>
+            <rect x="86" y="257" width="28" height="8" rx="1.5" fill="rgba(200,134,10,0.45)"/>
+          </svg>
+        </div>
+        <div class="ab-frame-border"></div>
+        <div class="ab-frame-tag">Est. 2009</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== KPI STRIP ========== -->
+<section class="kpi-strip">
+  <div class="container">
+    <div class="kpi-grid aos">
+      <div class="kpi-block">
+        <span class="kpi-big">15</span><span class="kpi-unit">ans</span>
+        <span class="kpi-label">d'expertise sectorielle</span>
+      </div>
+      <div class="kpi-block">
+        <span class="kpi-big">500<sup>+</sup></span>
+        <span class="kpi-label">clients & partenaires</span>
+      </div>
+      <div class="kpi-block">
+        <span class="kpi-big">2M<sup>+</sup></span>
+        <span class="kpi-label">tonnes / an traitées</span>
+      </div>
+      <div class="kpi-block">
+        <span class="kpi-big">200<sup>+</sup></span>
+        <span class="kpi-label">véhicules spécialisés</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MISSION / VISION ========== -->
+<section class="mv-section">
+  <div class="container">
+    <div class="mv-grid aos">
+      <div class="mv-card">
+        <span class="mv-sym">◈</span>
+        <p class="eyebrow">NOTRE MISSION</p>
+        <h3>Alimenter le développement national en énergie fiable</h3>
+        <p>Garantir un approvisionnement continu, sécurisé et compétitif en produits pétroliers pour l'ensemble des secteurs économiques, tout en contribuant activement à la transition énergétique nationale.</p>
+      </div>
+      <div class="mv-card mv-card-alt">
+        <span class="mv-sym">◎</span>
+        <p class="eyebrow">NOTRE VISION</p>
+        <h3>Devenir le leader régional des solutions énergétiques</h3>
+        <p>D'ici 2030, étendre notre présence à l'échelle régionale et devenir la référence incontournable pour toutes les solutions d'approvisionnement et de distribution d'hydrocarbures.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TIMELINE ========== -->
+<section class="tl-section">
+  <div class="container">
+    <div class="section-head aos">
+      <p class="eyebrow">NOTRE HISTOIRE</p>
+      <h2 class="section-h2">15 ans de <em>croissance continue</em></h2>
+    </div>
+
+    <div class="tl-wrapper aos">
+      <!-- Year buttons -->
+      <div class="tl-nav">
+        <button
+          *ngFor="let item of timeline; let i = index"
+          class="tl-btn"
+          [class.tl-btn-active]="activeYear === i"
+          (click)="setYear(i)"
+        >{{ item.year }}</button>
+      </div>
+
+      <!-- Content panel -->
+      <div class="tl-panel">
+        <ng-container *ngFor="let item of timeline; let i = index">
+          <div class="tl-content" [class.tl-content-active]="activeYear === i">
+            <div class="tl-bg-year">{{ item.year }}</div>
+            <h3 class="tl-item-title">{{ item.title }}</h3>
+            <p class="tl-item-desc">{{ item.desc }}</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== VALUES ========== -->
+<section class="val-section">
+  <div class="val-glow"></div>
+  <div class="container">
+    <div class="section-head aos">
+      <p class="eyebrow">NOS VALEURS</p>
+      <h2 class="section-h2">Les principes qui nous <em>guident</em></h2>
+    </div>
+    <div class="val-grid">
+      <div
+        class="val-card aos"
+        *ngFor="let v of values; let i = index"
+        [style.animation-delay]="(i * 0.12) + 's'"
+      >
+        <span class="val-sym">{{ v.sym }}</span>
+        <h3 class="val-title">{{ v.title }}</h3>
+        <p class="val-desc">{{ v.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEAM ========== -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-head aos">
+      <p class="eyebrow">L'ÉQUIPE DIRIGEANTE</p>
+      <h2 class="section-h2">Des experts au service de <em>votre énergie</em></h2>
+    </div>
+    <div class="team-grid">
+      <div
+        class="team-card aos"
+        *ngFor="let m of team; let i = index"
+        [style.animation-delay]="(i * 0.1) + 's'"
+      >
+        <div class="team-avatar">
+          <div class="ta-inner">{{ m.init }}</div>
+          <div class="ta-ring"></div>
+        </div>
+        <h3 class="team-name">{{ m.name }}</h3>
+        <p class="team-role">{{ m.role }}</p>
+        <p class="team-bio">{{ m.bio }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CERTIFICATIONS ========== -->
+<section class="cert-section">
+  <div class="container">
+    <div class="cert-inner aos">
+      <div class="cert-left">
+        <p class="eyebrow">CERTIFICATIONS & ACCRÉDITATIONS</p>
+        <p class="cert-sub">Reconnus par les organismes les plus exigeants du secteur pétrolier international.</p>
+      </div>
+      <div class="cert-badges">
+        <span class="cbadge">ISO 9001:2015</span>
+        <span class="cbadge">ISO 14001:2015</span>
+        <span class="cbadge">OHSAS 18001</span>
+        <span class="cbadge">API Standards</span>
+        <span class="cbadge">ADR Transport</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="ab-cta">
+  <div class="ab-cta-bg"></div>
+  <div class="container">
+    <div class="ab-cta-inner aos">
+      <h2>Rejoignez notre réseau d'excellence</h2>
+      <p>Partenaires, clients, fournisseurs — collaborons pour construire un avenir énergétique plus efficace ensemble.</p>
+      <div class="ab-cta-btns">
+        <a routerLink="/serv" class="btn-gold large">Nos services</a>
+        <a routerLink="/contact" class="btn-outline large">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
