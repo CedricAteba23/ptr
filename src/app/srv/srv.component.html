@@ -1,0 +1,210 @@
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="hero-particles">
+    <span class="particle p1"></span>
+    <span class="particle p2"></span>
+    <span class="particle p3"></span>
+    <span class="particle p4"></span>
+    <span class="particle p5"></span>
+    <span class="particle p6"></span>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-badge aos">
+      <span class="badge-dot"></span>
+      <span>Solutions Énergétiques Intégrées</span>
+    </div>
+
+    <h1 class="hero-title aos">
+      <span class="ht-line">L'Excellence</span>
+      <span class="ht-line ht-gold"><em>Pétrolière</em></span>
+      <span class="ht-line">à Votre Service</span>
+    </h1>
+
+    <p class="hero-subtitle aos">
+      De l'approvisionnement à la livraison finale, nous maîtrisons chaque maillon
+      de la chaîne énergétique avec 15 ans d'expertise internationale.
+    </p>
+
+    <div class="hero-cta aos">
+      <a routerLink="/contact" class="btn-gold">Demander un devis</a>
+      <a routerLink="/about" class="btn-ghost">Notre histoire &rarr;</a>
+    </div>
+
+    <div class="hero-kpis aos">
+      <div class="kpi">
+        <span class="kpi-num">2M+</span>
+        <span class="kpi-lbl">Tonnes / an</span>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi">
+        <span class="kpi-num">15</span>
+        <span class="kpi-lbl">Ans d'expertise</span>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi">
+        <span class="kpi-num">500+</span>
+        <span class="kpi-lbl">Clients actifs</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <div class="scroll-bar"></div>
+    <span>Découvrir</span>
+  </div>
+</section>
+
+<!-- ========== SERVICES LABEL ========== -->
+<section class="section-intro">
+  <div class="container">
+    <p class="eyebrow aos">NOS SERVICES</p>
+    <h2 class="section-title aos">
+      Trois piliers d'une <br><em>chaîne de valeur</em> complète
+    </h2>
+  </div>
+</section>
+
+<!-- ========== SERVICE CARDS ========== -->
+<section class="cards-section">
+  <div class="container">
+    <div class="cards-grid">
+
+      <div
+        *ngFor="let s of services; let i = index"
+        class="scard aos"
+        [class.scard-active]="activeCard === i"
+        [style.--accent]="s.accentColor"
+        [style.animation-delay]="(i * 0.15) + 's'"
+        [@cardState]="cardStates[i]"
+        (mouseenter)="onCardEnter(i)"
+        (mouseleave)="onCardLeave(i)"
+      >
+        <!-- Top stripe -->
+        <div class="scard-stripe"></div>
+
+        <!-- Number -->
+        <div class="scard-num">{{ s.id }}</div>
+
+        <!-- Icon -->
+        <div class="scard-icon">
+          <!-- Distribution -->
+          <svg *ngIf="s.icon === 'distribution'" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.4"/>
+            <path d="M14 44L32 18L50 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 44L32 28L44 44" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+            <circle cx="32" cy="18" r="3.5" fill="currentColor"/>
+            <circle cx="14" cy="44" r="3.5" fill="currentColor"/>
+            <circle cx="50" cy="44" r="3.5" fill="currentColor"/>
+          </svg>
+
+          <!-- Achats -->
+          <svg *ngIf="s.icon === 'achats'" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="16" width="44" height="34" rx="3" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="26" x2="54" y2="26" stroke="currentColor" stroke-width="2"/>
+            <circle cx="20" cy="12" r="2" fill="currentColor" opacity="0.6"/>
+            <circle cx="32" cy="12" r="2" fill="currentColor" opacity="0.6"/>
+            <circle cx="44" cy="12" r="2" fill="currentColor" opacity="0.6"/>
+            <line x1="18" y1="35" x2="28" y2="35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="36" y1="35" x2="46" y2="35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18" y1="42" x2="34" y2="42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M40 46L46 40L52 46" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <!-- Transports -->
+          <svg *ngIf="s.icon === 'transports'" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="24" width="38" height="22" rx="2.5" stroke="currentColor" stroke-width="2"/>
+            <path d="M44 30L58 30L58 46L44 46" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="17" cy="49" r="4.5" stroke="currentColor" stroke-width="2"/>
+            <circle cx="35" cy="49" r="4.5" stroke="currentColor" stroke-width="2"/>
+            <circle cx="51" cy="49" r="4.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="6" y1="18" x2="44" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+            <line x1="6" y1="13" x2="30" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <!-- Content -->
+        <div class="scard-content">
+          <p class="scard-subtitle">{{ s.subtitle }}</p>
+          <h3 class="scard-title">{{ s.title }}</h3>
+          <p class="scard-desc">{{ s.description }}</p>
+          <ul class="scard-features">
+            <li *ngFor="let f of s.features">
+              <span class="feat-dot"></span>{{ f }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Stats -->
+        <div class="scard-stats">
+          <div class="sstat" *ngFor="let st of s.stats">
+            <span class="sstat-val">{{ st.value }}</span>
+            <span class="sstat-lbl">{{ st.label }}</span>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="scard-footer">
+          <a href="#" class="scard-link">
+            En savoir plus
+            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Glow -->
+        <div class="scard-glow"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY US ========== -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-inner aos">
+      <div class="why-text">
+        <p class="eyebrow">POURQUOI NOUS CHOISIR</p>
+        <h2>Une approche <em>intégrée</em> et <em>sécurisée</em></h2>
+        <p class="why-desc">
+          Chaque opération est encadrée par des protocoles stricts, certifiés par les organismes
+          internationaux les plus exigeants. La sécurité n'est pas une option — c'est notre standard.
+        </p>
+        <div class="certs">
+          <span class="cert-tag">ISO 9001</span>
+          <span class="cert-tag">ISO 14001</span>
+          <span class="cert-tag">OHSAS 18001</span>
+          <span class="cert-tag">API Certified</span>
+        </div>
+      </div>
+      <div class="why-visual">
+        <div class="wr wr1"></div>
+        <div class="wr wr2"></div>
+        <div class="wr wr3"></div>
+        <div class="why-core">
+          <span class="wc-num">15+</span>
+          <span class="wc-lbl">Années<br>d'excellence</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="container">
+    <div class="cta-inner aos">
+      <h2>Prêt à optimiser votre chaîne énergétique ?</h2>
+      <p>Nos experts analysent vos besoins et proposent des solutions sur mesure.</p>
+      <div class="cta-btns">
+        <a routerLink="/contact" class="btn-gold large">Contactez-nous</a>
+        <a routerLink="/about" class="btn-outline large">Découvrir notre histoire</a>
+      </div>
+    </div>
+  </div>
+</section>

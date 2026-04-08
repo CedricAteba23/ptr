@@ -10,6 +10,7 @@ import { EntrepriseComponent } from './entreprise/entreprise.component';
 
 // import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SrvComponent } from './srv/srv.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     AcceuilComponent,
     EntrepriseComponent,
+    SrvComponent,
   
     
   ],
