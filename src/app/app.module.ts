@@ -10,6 +10,7 @@ import { EntrepriseComponent } from './entreprise/entreprise.component';
 
 // import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 
@@ -18,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     AcceuilComponent,
     EntrepriseComponent,
+    ContactsComponent,
     
   
     
