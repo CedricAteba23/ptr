@@ -1,106 +1,94 @@
-/* CONTAINER */
-.director-container {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #0b3d2e, #198754);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+/* SECTION */
+.president-section {
+  background: linear-gradient(135deg, #0a2f25, #0b7a63);
+  padding: 80px 20px;
 }
 
 /* CARD */
-.director-card {
-  background: #fff;
-  border-radius: 20px;
-  max-width: 900px;
+.president-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+/* IMAGE */
+.president-image img {
   width: 100%;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-  overflow: hidden;
-  animation: fadeUp 0.8s ease;
-}
-
-/* HEADER */
-.card-header {
-  display: flex;
-  align-items: center;
-  padding: 30px;
-  background: #f8f9fa;
-  border-bottom: 3px solid #d4af37;
-}
-
-.card-header img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  border-radius: 8px;
   object-fit: cover;
-  border: 4px solid #d4af37;
-  margin-right: 20px;
 }
 
-.info h2 {
-  margin: 0;
+/* CONTENU */
+.president-content {
+  padding: 20px;
+}
+
+/* LABEL */
+.section-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* NOM */
+.president-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
   color: #0b3d2e;
+  margin-bottom: 10px;
 }
 
-.title {
-  color: #198754;
-  font-weight: 600;
+/* TITRE */
+.president-title {
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-.subtitle {
-  color: #d4af37;
-  font-size: 14px;
+/* LIGNE OR */
+.gold-line {
+  width: 80px;
+  height: 3px;
+  background: #c9a646;
+  margin: 20px 0;
 }
 
-/* BODY */
-.card-body {
-  padding: 30px;
-}
-
-.card-body p {
+/* TEXTE */
+.president-content p {
+  line-height: 1.8;
+  color: #333;
   margin-bottom: 15px;
-  line-height: 1.7;
-  color: #444;
+  text-align: justify;
 }
 
-/* FOOTER */
-.card-footer {
-  padding: 20px 30px;
-  background: #f8f9fa;
+/* SIGNATURE */
+.signature-block {
+  margin-top: 30px;
   text-align: right;
-  font-weight: bold;
+  font-weight: 600;
   color: #0b3d2e;
-  border-top: 2px solid #d4af37;
-}
-
-/* ANIMATION */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
-  .card-header {
-    flex-direction: column;
+  .president-card {
+    padding: 20px;
+  }
+
+  .president-name {
+    font-size: 24px;
     text-align: center;
   }
 
-  .card-header img {
-    margin-bottom: 15px;
-  }
-
-  .card-footer {
+  .president-content {
     text-align: center;
   }
 
-  
+  .signature-block {
+    text-align: center;
+  }
 
 }
