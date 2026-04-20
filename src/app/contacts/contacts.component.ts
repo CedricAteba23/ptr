@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent {
+// sidebarOpen = false;
 
+// toggleSidebar(){
+// this.sidebarOpen = !this.sidebarOpen;
+// }
 }
